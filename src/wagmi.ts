@@ -15,7 +15,7 @@ export const supportedChainIds: SupportedChainId[] = supportedChains.map(
   (chain) => chain.id
 );
 
-const projectId = 'TODO';
+const projectId = '3bf1e3221ac1181371ad369b88e990d2';
 
 coinbaseWallet.preference = 'all';
 
