@@ -16,13 +16,15 @@ function App() {
   const transferWethResponse = useWriteContract();
 
   const onTransfer = () => {
+    if (!account.address) {
+      throw new Error('Account not connected');
+    }
     transferWethResponse.writeContract({
       chainId: baseSepolia.id,
       address: '0x4200000000000000000000000000000000000006',
       abi: erc20Abi,
       functionName: 'transferFrom',
       args: [account.address ?? zeroAddress, zeroAddress, parseEther('0.01')],
-      query: { enabled: !!account.address },
     });
   };
 
