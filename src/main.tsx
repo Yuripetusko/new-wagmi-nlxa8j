@@ -12,6 +12,7 @@ import { config } from './wagmi';
 import './index.css';
 import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
 
+//@ts-expect-error
 globalThis.Buffer = Buffer;
 
 const queryClient = new QueryClient();
